@@ -15,8 +15,8 @@ Project is created with:
 
 ## Assumption
 User should know about their ID card number and accountID.
-There is no limit to deposit.
-ID card number that user enter is considered as a clientId.
+There is no limit to deposit. <br/>
+ID card number that user enter is considered as a clientId. <br/>
 Each account own a transaction book which jots down their its transaction.
 
 ## Remark

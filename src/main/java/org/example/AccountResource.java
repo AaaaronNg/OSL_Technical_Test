@@ -25,6 +25,8 @@ public class AccountResource {
     }
 
 
+
+
     public Account getAccount(Integer id){
         Account account = accountDAOService.findOne(id);
         return account;
@@ -32,6 +34,31 @@ public class AccountResource {
     public Account getAccountByClientId(String clientId){
         Account account = accountDAOService.findOneByClientId(clientId);
         return account;
+    }
+
+    public void listBalance(){
+        Account account;
+        Integer idInt;
+        while (true){
+            System.out.println("Please enter account ID to show the balance");
+            String id = keypad.getString();
+            while(!id.matches("[0-9]+")){
+                System.out.println("Please enter a valid account ID");
+                id = keypad.getString();
+            }
+            idInt = Integer.parseInt(id);
+            account = getAccount(idInt);
+            if(account != null){
+                break;
+            }
+            System.out.println("Your account ID is incorrect");
+        }
+
+        if(account != null){
+            account = getAccount(idInt);
+            System.out.println("Account ID: "+idInt);
+            System.out.println("The balance is "+account.getBalance());
+        }
     }
 
     public void printTransactionStatement(){

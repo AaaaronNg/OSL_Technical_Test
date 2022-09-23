@@ -15,6 +15,7 @@ public class Bank {
     private static final int WITHDRAWAL = 3;
     private static final int TRANSFER = 4;
     private static final int TRANSACTION_STATEMENT = 5;
+    private static final int LIST_ACCOUNT_BALANCE = 6;
 
     public Bank(){
         keypad = new Keypad();
@@ -45,6 +46,9 @@ public class Bank {
                 case TRANSACTION_STATEMENT:
                     accountResource.printTransactionStatement();
                     break;
+                case LIST_ACCOUNT_BALANCE:
+                    accountResource.listBalance();
+                    break;
                 default:
                     System.out.println("End");
             }
@@ -63,17 +67,19 @@ public class Bank {
 
     // user menu
     private int userMenu(){
+        System.out.println("");
         System.out.println("1. Create new account");
         System.out.println("2. Deposit money");
         System.out.println("3. Withdraw money");
         System.out.println("4. Transfer cash");
         System.out.println("5. Display transaction statement");
+        System.out.println("6. List bank account balance");
         int choice;
 
         do{
             System.out.println("Enter the choice");
             choice = keypad.getInteger();
-        }while(choice<1 || choice>5);
+        }while(choice<1 || choice>6);
 
         return choice;
     }
