@@ -17,6 +17,7 @@ Project is created with:
 User should know about their ID card number and accountID.
 There is no limit to deposit.
 ID card number that user enter is considered as a clientId.
+Each account own a transaction book which jots down their its transaction.
 
 ## Remark
 1. There are some default accounts. <br/>
