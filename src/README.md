@@ -14,10 +14,10 @@ Project is created with:
 * openJDK-18 version 18.0.1
 
 ## Assumption
-User should know about their ID card number and accountID.
+User should know about their ID card number and accountID. <br/>
 There is no limit to deposit. <br/>
 ID card number that user enter is considered as a clientId. <br/>
-Each account own a transaction book which jots down their its transaction.
+Each account owns a transaction book which jots down their transaction.
 
 ## Remark
 1. There are some default accounts. <br/>
